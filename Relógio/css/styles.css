@@ -1,0 +1,41 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+    .central {
+        width: 350px;
+        height: 200px;
+        background: transparent;
+        border-radius: 10px;
+        box-shadow:3px 3px 10px #282829;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-left: 10mm;
+        margin-top: 130mm;
+    }
+
+    .central div{
+    background: transparent;
+    color: aliceblue;
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+
+    .central div span{
+        font-size: 80px;
+    }
+
+    .central div p{
+        font-size: 20px;
+        margin: 0;
+    }
