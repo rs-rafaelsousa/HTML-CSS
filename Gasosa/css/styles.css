@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(/images/Espaço.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ 
+
+}
+
+.central {
+    width: 50vh;
+    height: 50vh;
+    background: rgba(0, 0, 0, 0.74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 60px;
+    gap: 20px;
+    box-shadow: 20px 20px 20px ;
+}
+
+.central span{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: aliceblue;
+}
+
+.central input{
+border-radius: 10px;
+border: none;
+width: 30vh;
+height: 25px;
+}
+
+.central button{
+    cursor: pointer;
+    height: 30px;
+    width: 90px;
+    background: rgb(59, 92, 141);
+    border:none ;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(32, 37, 109, 0.808);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.central button:hover{
+
+background: rgb(28, 28, 173);
+color: white;
+}
+
+.central p{
+    font-size: 20px;
+    color:rgb(255, 255, 255)
+
+}
+
