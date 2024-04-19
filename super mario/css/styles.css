@@ -1,0 +1,66 @@
+body{
+height: 100vh;
+background: url(/images/mario\ cenario.png);
+background-size: cover;
+background-attachment: fixed;
+}
+
+#mario{
+    width: 200px;
+    position: absolute;
+    top: 600px;
+    left: 0px;
+    animation: run 10s infinite ease-out;  
+}
+
+#nuvens{
+width: 200px;
+position: absolute;
+top: 0px;
+right: 80px;
+animation: motion 40s infinite ease-out;
+}
+
+@keyframes run{
+0%{
+top: 660px;
+left: 0px;
+}
+10%{
+   top: 660px; 
+  
+}
+20%{
+    top: 660px;
+   
+}
+30%{
+top:670 px;
+left: 30%;
+}
+40%{
+    top: 670px;
+    left: 45%;
+}
+
+59%{
+top:530px;
+left:50%;
+}
+
+
+100%{
+top: 670px;
+left: 110%;
+}  
+}
+@keyframes motion{
+    0%{
+    top: 0px;
+    right: 80px;
+    }
+    100%{
+    top: 0px;
+    right: 1900px;
+    }  
+    }
