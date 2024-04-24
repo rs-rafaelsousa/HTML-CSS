@@ -1,0 +1,38 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+.body{
+    background-attachment: fixed;
+    background-size: cover;
+    height: 200vh;
+}
+.central{
+background: url(/images/city.gif);
+background-attachment: fixed;   
+background-size: cover;
+height: 90vh;
+}
+
+.estrada{
+background: linear-gradient(rgba(22, 6, 20, 0.846), rgb(0, 0, 0));
+height: 10vh;
+width: 100%;
+border-color: rgb(0, 0, 0);
+border-style: solid;
+border-left: none;
+border-right: none;
+box-shadow: 0px 10px 10px black;
+}
+
+#scott{
+    width: 360px;
+    position: absolute;
+    top: 900px;
+    left: 300px;
+    background-size: cover;
+
+}
+
