@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cursos</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        div {
+            margin-bottom: 15px;
+        }
+        input {
+            padding: 8px;
+            width: 300px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .lista-cursos {
+            margin-top: 20px;
+        }
+        .curso-item {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .excluir-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .excluir-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cadastro de Cursos</h1>
+
+    <div>
+        <p>Nome do Curso</p>
+        <input type="text" id="nomeCurso" placeholder="Digite o nome do curso">
+        
+        <p>Duração (em anos)</p>
+        <input type="number" id="duracaoCurso" placeholder="Digite a duração do curso">
+        
+        <p>Coordenador do Curso</p>
+        <input type="text" id="coordenadorCurso" placeholder="Digite o nome do coordenador">
+    </div>
+    
+    <button id="cad">Cadastrar Curso</button>
+
+    <h1>Cursos Cadastrados</h1>
+    <div class="lista-cursos" id="listaCursos">
+        
+    </div>
+
+    <script>
+        
+        document.getElementById("cad").addEventListener("click", function() {
+            const nome = document.getElementById("nomeCurso").value;
+            const duracao = document.getElementById("duracaoCurso").value;
+            const coordenador = document.getElementById("coordenadorCurso").value;
+
+            
+            if (nome && duracao && coordenador) {
+            
+                const cursoItem = document.createElement("div");
+                cursoItem.classList.add("curso-item");
+
+                
+                cursoItem.innerHTML = `
+                    <div>
+                        <strong>${nome}</strong> - ${duracao} anos<br>
+                        Coordenador: ${coordenador}
+                    </div>
+                    <button class="excluir-btn" onclick="excluirCurso(this)">Excluir</button>
+                `;
+
+                document.getElementById("listaCursos").appendChild(cursoItem);
+
+                document.getElementById("nomeCurso").value = '';
+                document.getElementById("duracaoCurso").value = '';
+                document.getElementById("coordenadorCurso").value = '';
+            } else {
+                alert("Por favor, preencha todos os campos.");
+            }
+        });
+
+        
+        function excluirCurso(botao) {
+            const cursoItem = botao.parentElement; 
+            cursoItem.remove();
+        }
+    </script>
+
+</body>
+
+</html>
